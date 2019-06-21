@@ -1,23 +1,31 @@
-/**
- * @author Kholod, Serhii
- */
+sap.ui.define([
+  'jquery.sap.global',
+  "sap/ui/core/UIComponent",
+  "sap/ui/model/json/JSONModel",
+  "sap/ui/Device"
+], function (Query, UIComponent, JSONModel, Device) {
+  "use strict";
 
-import UIComponent from "sap/ui/core/UIComponent";
+  return UIComponent.extend("UI5toLearn.Component", {
+    metadata: {
+      manifest: "json"
+    },
+    init: function () {
+      UIComponent.prototype.init.apply(this, arguments);
 
-export default class Component extends UIComponent {
+      var oModel = this.getModel("Model");
+      // console.log(this.getModel("Model"));
+      var sLogin, sPassword;
+      oModel.setProperty("/login", sLogin);
+      oModel.setProperty("/password", sPassword);
 
-  metadata = {
-    manifest: "json"
-  };
+      // set device model
+      var oDeviceModel = new sap.ui.model.json.JSONModel(Device);
+      oDeviceModel.setDefaultBindingMode("OneWay");
+      this.setModel(oDeviceModel, "device");
 
-  onAfterRendering() {
-    // $("container>block").draggable({ scroll: true, cursor: "move",
-    //   start: function(e, ui) {
-    //     $(ui.helper).addClass('dragging');
-    //   },
-    //   stop: function(e, ui) {
-    //     $(ui.helper).removeClass('dragging');
-    //   }
-    // });
-  }
-}
+      // create the views based on the url/hash
+      this.getRouter().initialize();
+    }
+  });
+});
