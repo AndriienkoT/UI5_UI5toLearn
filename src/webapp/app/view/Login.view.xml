@@ -1,0 +1,14 @@
+<mvc:View
+  controllerName="UI5toLearn.controller.Login"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns:control="UI5toLearn.control"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+  <Page id="login">
+    <content>
+      <control:LoginControl press="onButtonPress">
+      </control:LoginControl>
+    </content>
+  </Page>
+</mvc:View>

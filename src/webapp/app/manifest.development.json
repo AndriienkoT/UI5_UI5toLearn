@@ -33,7 +33,7 @@
   "sap.ui5": {
     "_version": "0.0.1",
     "rootView": {
-      "viewName": "UI5toLearn.App",
+      "viewName": "UI5toLearn.view.App",
       "type": "XML",
       "id": "app"
     },
@@ -49,14 +49,56 @@
       "compact": true,
       "cozy": true
     },
-    "models": {},
+    "models": {
+      "Model": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/Model.json",
+        "preload": true
+      }
+    },
     "resources": {
       "css": [
-        "uri": ""
+        {
+          "uri": "css/style.css"
+        }
       ],
       "js": [
 
       ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "UI5toLearn.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "transition": "slide",
+        "homeRoute": "login"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "login",
+          "target": "login"
+        },
+        {
+          "pattern": "main",
+          "name": "main",
+          "target": "main"
+        }
+      ],
+      "targets": {
+        "login": {
+          "viewId": "login",
+          "viewName": "Login",
+          "viewLevel": 1
+        },
+        "main": {
+          "viewName": "Main",
+          "viewLevel": 1
+        }
+      }
     }
   }
 }
