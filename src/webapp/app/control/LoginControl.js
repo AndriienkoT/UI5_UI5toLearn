@@ -10,7 +10,6 @@ sap.ui.define([
   return Control.extend("UI5toLearn.control.LoginControl", {
     metadata : {
       properties : {
-        // icon: {type: "string", defaultValue: "sap-icon://family-care"}
       },
       aggregations : {
         _icon : {type: "sap.ui.core.Icon", multiple: false},
@@ -51,8 +50,6 @@ sap.ui.define([
       }));
     },
     onPress: function (oEvent) {
-      // var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-      // oRouter.navTo("main");
       this.fireEvent("press", {
       });
     },

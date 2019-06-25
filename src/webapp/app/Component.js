@@ -14,7 +14,6 @@ sap.ui.define([
       UIComponent.prototype.init.apply(this, arguments);
 
       var oModel = this.getModel("Model");
-      // console.log(this.getModel("Model"));
       var sLogin, sPassword;
       oModel.setProperty("/login", sLogin);
       oModel.setProperty("/password", sPassword);
