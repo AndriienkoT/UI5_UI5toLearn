@@ -1,4 +1,12 @@
 {
   "login": "",
-  "password": ""
+  "password": "",
+  "navigation": [{
+    "icon": "sap-icon://person-placeholder",
+    "title": "Profile"
+  },{
+    "icon": "sap-icon://log",
+    "title": "Logout"
+  }
+  ]
 }

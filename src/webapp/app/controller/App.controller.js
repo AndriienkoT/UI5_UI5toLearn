@@ -3,6 +3,7 @@ sap.ui.define([
 ], function (BaseController) {
   "use strict";
   return BaseController.extend("UI5toLearn.controller.App", {
+
     onInit: function () {
       jQuery.sap.log.setLevel(jQuery.sap.log.Level.INFO);
       var oRouter = this.getRouter();
@@ -15,6 +16,13 @@ sap.ui.define([
         var sRouteName = oEvent.getParameter("name");
         jQuery.sap.log.info("User accessed route " + sRouteName + ", timestamp = " + new Date().getTime());
       });
+    },
+
+    //press menu button
+    onMenuButtonPress : function (oEvent) {
+      var viewId = this.getView().getId();
+      var mainPage = sap.ui.getCore().byId(viewId + "--main");
+      mainPage.setSideExpanded(!mainPage.getSideExpanded());
     }
   });
 });

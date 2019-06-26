@@ -16,6 +16,17 @@
         <Text text="Hi, {Model>/login}"/>
       </tnt:ToolHeader>
     </tnt:header>
+
+    <tnt:sideContent>
+      <tnt:SideNavigation expanded="true" itemSelect="onLogoutPress">
+        <tnt:NavigationList items="{path: 'Model>/navigation'}">
+          <tnt:NavigationListItem icon="{path: 'Model>icon'}"
+                                  text="{path: 'Model>title'}"
+                                  enabled="true">
+          </tnt:NavigationListItem>
+        </tnt:NavigationList>
+      </tnt:SideNavigation>
+    </tnt:sideContent>
   </tnt:ToolPage>
 
 </mvc:View>
