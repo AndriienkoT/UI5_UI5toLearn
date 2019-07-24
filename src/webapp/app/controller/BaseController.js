@@ -21,6 +21,10 @@ sap.ui.define([
 
     getModel: function (oEvent) {
       return this.getOwnerComponent().getModel("Model");
+    },
+
+    getEventBus: function (oEvent) {
+      return sap.ui.getCore().getEventBus();
     }
   });
 });
