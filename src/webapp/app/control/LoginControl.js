@@ -30,7 +30,7 @@ sap.ui.define([
       this.setAggregation("_userNameInput", new Input({
         id: "loginLoginControl",
         value: "{/login}",
-        placeholder: "Enter username",
+        placeholder: "{i18n>LoginPlaceholder}",
         valueLiveUpdate: true,
         width: "25%"
       }));
@@ -38,17 +38,18 @@ sap.ui.define([
       this.setAggregation("_passwordInput", new Input({
         id: "passwordLoginControl",
         value: "{/password}",
-        placeholder: "Enter password",
+        placeholder: "{i18n>PasswordPlaceholder}",
         valueLiveUpdate: true,
         width: "25%"
       }));
 
       this.setAggregation("_button", new Button({
         id: "signInLoginControl",
-        text: "Sign in",
+        text: "{i18n>ButtonText}",
         press: this.onPress.bind(this)
       }));
     },
+
     onPress: function (oEvent) {
       this.fireEvent("press", {
       });
