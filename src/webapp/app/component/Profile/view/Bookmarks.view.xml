@@ -3,6 +3,7 @@
   xmlns:core="sap.ui.core"
   xmlns="sap.m"
   xmlns:tnt="sap.tnt"
+  xmlns:l="sap.ui.layout"
   xmlns:viz="sap.viz.ui5.controls"
   xmlns:vizdata="sap.viz.ui5.data"
   xmlns:vizfeeds="sap.viz.ui5.controls.common.feeds"
@@ -18,7 +19,8 @@
     </tnt:header>
 
     <tnt:mainContents>
-      <viz:VizFrame id="vizFrame" vizType='column'>
+      <l:HorizontalLayout>
+      <viz:VizFrame vizProperties="{ title: {text : 'Column chart', visible : true}}" vizType='column'>
         <viz:dataset>
           <vizdata:FlattenedDataset data="{Model>/members}">
             <vizdata:dimensions>
@@ -34,6 +36,24 @@
           <vizfeeds:FeedItem uid="categoryAxis" type="Dimension" values="Name"/>
         </viz:feeds>
       </viz:VizFrame>
+
+      <viz:VizFrame vizProperties="{ title: {text : 'Pie chart', visible : true}}" vizType='pie'>
+        <viz:dataset>
+          <vizdata:FlattenedDataset data="{Model>/members}">
+            <vizdata:dimensions>
+              <vizdata:DimensionDefinition name="Name" value="{Model>name}"/>
+            </vizdata:dimensions>
+            <vizdata:measures>
+              <vizdata:MeasureDefinition name="Kid age" value="{Model>kidAge}"/>
+            </vizdata:measures>
+          </vizdata:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+          <vizfeeds:FeedItem uid="size" type="Measure" values="Kid age"/>
+          <vizfeeds:FeedItem uid="color" type="Dimension" values="Name"/>
+        </viz:feeds>
+      </viz:VizFrame>
+      </l:HorizontalLayout>
     </tnt:mainContents>
   </tnt:ToolPage>
 
