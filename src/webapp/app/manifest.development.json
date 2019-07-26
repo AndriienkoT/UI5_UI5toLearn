@@ -107,6 +107,11 @@
           "target": "answers"
         },
         {
+          "pattern": "bookmarks",
+          "name": "bookmarks",
+          "target": "bookmarks"
+        },
+        {
           "pattern": "searchForFriends",
           "name": "searchForFriends",
           "target": "searchForFriends"
@@ -135,6 +140,11 @@
         },
         "answers": {
           "viewName": "Answers",
+          "viewPath": "UI5toLearn.component.Profile.view",
+          "viewLevel": 2
+        },
+        "bookmarks": {
+          "viewName": "Bookmarks",
           "viewPath": "UI5toLearn.component.Profile.view",
           "viewLevel": 2
         },

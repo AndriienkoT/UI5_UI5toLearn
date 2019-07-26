@@ -142,6 +142,7 @@ div .iconStyle {
 html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customNotesIcon.sapUiIcon:focus,
 html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customLikesIcon.sapUiIcon:focus,
 html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customAnswersIcon.sapUiIcon:focus,
+html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customBookmarksIcon.sapUiIcon:focus,
 html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customReturnIcon.sapUiIcon:focus,
 html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customFriendIcon.sapUiIcon:focus {
   outline: none;

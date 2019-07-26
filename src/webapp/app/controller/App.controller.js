@@ -19,6 +19,7 @@ sap.ui.define([
 
       this.getEventBus().subscribe("Profile", "GoToNotes", this.goToNotes, this);
       this.getEventBus().subscribe("Profile", "GoToAnswers", this.goToAnswers, this);
+      this.getEventBus().subscribe("Profile", "GoToBookmarks", this.goToBookmarks, this);
       this.getEventBus().subscribe("Profile", "GoToSelectedItem", this.goToSelectedItem, this);
     },
 
@@ -51,6 +52,9 @@ sap.ui.define([
     },
     goToAnswers: function (oEvent) {
       this.getRouter().navTo("answers");
+    },
+    goToBookmarks: function (oEvent) {
+      this.getRouter().navTo("bookmarks");
     },
     goToSelectedItem: function (sChannel, oEvent, data) {
       this.getRouter().navTo(data);

@@ -57,7 +57,7 @@
       </l:VerticalLayout>
 
       <l:VerticalLayout class="customVerLayIcon">
-        <core:Icon tooltip="Bookmarks" class="customBookmarksIcon" />
+        <core:Icon tooltip="Bookmarks" class="customBookmarksIcon" press="goToBookmarks" />
       </l:VerticalLayout>
 
       <List id="profileList"
