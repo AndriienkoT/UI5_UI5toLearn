@@ -14,6 +14,10 @@ sap.ui.define([
       this.getEventBus().publish("Profile", "GoToCharts");
     },
 
+    goToKPITiles: function (oEvent) {
+      this.getEventBus().publish("Profile", "GoToKPITiles");
+    },
+
     onItemSelected: function (oEvent) {
       var sId = oEvent.getSource().sId;
       var sElementId = sId.substr(sId.length - 1);

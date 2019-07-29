@@ -115,6 +115,11 @@
           "pattern": "charts",
           "name": "charts",
           "target": "charts"
+        },
+        {
+          "pattern": "kpiTiles",
+          "name": "kpiTiles",
+          "target": "kpiTiles"
         }
       ],
       "targets": {
@@ -135,23 +140,23 @@
         },
         "searchForFriends": {
           "viewName": "SearchForFriends",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
+          "viewPath": "UI5toLearn.component.Profile.view"
         },
         "dragAndDrop": {
           "viewName": "DragAndDrop",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
+          "viewPath": "UI5toLearn.component.Profile.view"
         },
         "splitApp": {
           "viewName": "SplitApp",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
+          "viewPath": "UI5toLearn.component.Profile.view"
         },
         "charts": {
           "viewName": "Charts",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
+          "viewPath": "UI5toLearn.component.Profile.view"
+        },
+        "kpiTiles": {
+          "viewName": "KPITiles",
+          "viewPath": "UI5toLearn.component.Profile.view"
         }
       }
     }

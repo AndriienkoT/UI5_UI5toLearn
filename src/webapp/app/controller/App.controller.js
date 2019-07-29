@@ -19,6 +19,7 @@ sap.ui.define([
 
       this.getEventBus().subscribe("Profile", "GoToSplitApp", this.goToSplitApp, this);
       this.getEventBus().subscribe("Profile", "GoToCharts", this.goToCharts, this);
+      this.getEventBus().subscribe("Profile", "GoToKPITiles", this.goToKPITiles, this);
       this.getEventBus().subscribe("Profile", "GoToSelectedItem", this.goToSelectedItem, this);
       this.getEventBus().subscribe("Profile", "GoToSelectedFunction", this.goToSelectedItem, this);
     },
@@ -52,6 +53,9 @@ sap.ui.define([
     },
     goToCharts: function (oEvent) {
       this.getRouter().navTo("charts");
+    },
+    goToKPITiles: function (oEvent) {
+      this.getRouter().navTo("kpiTiles");
     },
     goToSelectedItem: function (sChannel, oEvent, data) {
       this.getRouter().navTo(data);

@@ -14,7 +14,7 @@
     <tnt:header>
       <tnt:ToolHeader class="customHeader">
         <core:Icon src="sap-icon://nav-back" press="onNavBack" class="customReturnIcon"/>
-        <Text text="Bookmarks" class="customHeaderText" />
+        <Text text="Charts" class="customHeaderText" />
       </tnt:ToolHeader>
     </tnt:header>
 
