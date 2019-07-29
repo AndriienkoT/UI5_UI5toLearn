@@ -6,16 +6,12 @@ sap.ui.define([
   "use strict";
   return BaseController.extend("UI5toLearn.component.Profile.controller.Profile", {
 
-    goToNotes: function (oEvent) {
-      this.getEventBus().publish("Profile", "GoToNotes");
+    goToSplitApp: function (oEvent) {
+      this.getEventBus().publish("Profile", "GoToSplitApp");
     },
 
-    goToAnswers: function (oEvent) {
-      this.getEventBus().publish("Profile", "GoToAnswers");
-    },
-
-    goToBookmarks: function (oEvent) {
-      this.getEventBus().publish("Profile", "GoToBookmarks");
+    goToCharts: function (oEvent) {
+      this.getEventBus().publish("Profile", "GoToCharts");
     },
 
     onItemSelected: function (oEvent) {
@@ -24,6 +20,14 @@ sap.ui.define([
       var sViewId = this.getView().byId("profileList").getBinding("items").oList[sElementId].viewId;
       if (sViewId != undefined) {
         this.getEventBus().publish("Profile", "GoToSelectedItem", sViewId);
+      }
+    },
+    onFunctionSelected: function (oEvent) {
+      var sId = oEvent.getSource().sId;
+      var sElementId = sId.substr(sId.length - 1);
+      var sViewId = this.getView().byId("functionList").getBinding("items").oList[sElementId].viewId;
+      if (sViewId != undefined) {
+        this.getEventBus().publish("Profile", "GoToSelectedFunction", sViewId);
       }
     },
 

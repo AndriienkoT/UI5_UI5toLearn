@@ -10,7 +10,7 @@
   controllerName="UI5toLearn.component.Profile.controller.Profile" width="100%" height="100%"
   displayBlock="true">
 
-  <tnt:ToolPage id="bookmarks">
+  <tnt:ToolPage id="charts">
     <tnt:header>
       <tnt:ToolHeader class="customHeader">
         <core:Icon src="sap-icon://nav-back" press="onNavBack" class="customReturnIcon"/>

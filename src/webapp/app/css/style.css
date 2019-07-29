@@ -47,11 +47,9 @@ div .iconStyle {
   height: 50px !important;
   background-size: contain;
 }
-
 .inputStyle {
   margin-left: 38%;
 }
-
 .buttonStyle {
   width: 25%;
   margin-left: 38%;
@@ -72,7 +70,6 @@ div .iconStyle {
 .sap-desktop .customProfilePage .sapTntToolPageMain {
   padding-left: 5%;
 }
-
 .customVerLayPicText {
   width: 45%;
 }
@@ -106,13 +103,11 @@ div .iconStyle {
 .customHorLayPicText div:nth-child(2) {
   top: 20%;
 }
-
 /*Image*/
 .customUserImage {
   border-radius: 50%;
   margin-top: 2%;
 }
-
 /*Text*/
 .customUserName.sapMText, .customText.sapMText {
   color: cornflowerblue;
@@ -127,7 +122,6 @@ div .iconStyle {
 .customText.sapMText {
   font-size: 1rem;
 }
-
 /*Icons*/
 .customVerLayIcon {
   min-width: 63px;
@@ -162,23 +156,34 @@ html:not([data-sap-ui-browser^="ie"]):not([data-sap-ui-browser^="ed"]) .customFr
   height: 60px !important;
   background-size: contain;
 }
-.customListItem.sapMLIB {
+.customFriendIcon, .customGroupIcon, .customSettingsIcon, .customHelpIcon {
+  width: 40px !important;
+  height: 40px !important;
+  background-size: contain;
+}
+/*option and function lists*/
+.customListItem.sapMLIB, .customFunctionListItem.sapMLIB {
   border-bottom: none;
   background-color: inherit !important;
 }
-.customListItem.sapMLIBFocusable:focus {
+.customListItem.sapMLIBFocusable:focus, .customFunctionListItem.sapMLIBFocusable:focus {
   outline: none;
 }
 .customListItem .sapMSLITitleOnly {
   color: cornflowerblue;
   font-family: "Comic Sans MS";
 }
-
-.customFriendIcon, .customGroupIcon, .customSettingsIcon, .customHelpIcon {
-  width: 40px !important;
-  height: 40px !important;
-  background-size: contain;
+.customFunctionListItem .sapMSLITitleOnly {
+  color: green;
+  font-family: "Comic Sans MS";
 }
+.customFunctionListItem.sapMSLI {
+  height: 64px;
+}
+.customHorLayProfileView div:nth-child(1) {
+  width: 130%;
+}
+
 
 /*SearchForFriends page*/
 .sap-desktop .customTable .sapTntToolPageAsideCollapsed .sapTntToolPageMain,

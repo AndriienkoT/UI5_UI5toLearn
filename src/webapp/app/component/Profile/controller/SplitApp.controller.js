@@ -9,7 +9,7 @@ sap.ui.define([
   'sap/base/Log'
 ], function (BaseController, jQuery, MessageToast, Fragment, Controller, Filter, JSONModel, Log) {
   "use strict";
-  return BaseController.extend("UI5toLearn.component.Profile.controller.Answers", {
+  return BaseController.extend("UI5toLearn.component.Profile.controller.SplitApp", {
 
     onOrientationChange: function(oEvent) {
       var bLandscapeOrientation = oEvent.getParameter("landscape");

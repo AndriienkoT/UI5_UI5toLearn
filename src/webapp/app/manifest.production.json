@@ -97,24 +97,24 @@
           "target": "profile"
         },
         {
-          "pattern": "notes",
-          "name": "notes",
-          "target": "notes"
-        },
-        {
-          "pattern": "answers",
-          "name": "answers",
-          "target": "answers"
-        },
-        {
-          "pattern": "bookmarks",
-          "name": "bookmarks",
-          "target": "bookmarks"
-        },
-        {
           "pattern": "searchForFriends",
           "name": "searchForFriends",
           "target": "searchForFriends"
+        },
+        {
+          "pattern": "dragAndDrop",
+          "name": "dragAndDrop",
+          "target": "dragAndDrop"
+        },
+        {
+          "pattern": "splitApp",
+          "name": "splitApp",
+          "target": "splitApp"
+        },
+        {
+          "pattern": "charts",
+          "name": "charts",
+          "target": "charts"
         }
       ],
       "targets": {
@@ -133,23 +133,23 @@
           "viewPath": "UI5toLearn.component.Profile.view",
           "viewLevel": 1
         },
-        "notes": {
-          "viewName": "Notes",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
-        },
-        "answers": {
-          "viewName": "Answers",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
-        },
-        "bookmarks": {
-          "viewName": "Bookmarks",
-          "viewPath": "UI5toLearn.component.Profile.view",
-          "viewLevel": 2
-        },
         "searchForFriends": {
           "viewName": "SearchForFriends",
+          "viewPath": "UI5toLearn.component.Profile.view",
+          "viewLevel": 2
+        },
+        "dragAndDrop": {
+          "viewName": "DragAndDrop",
+          "viewPath": "UI5toLearn.component.Profile.view",
+          "viewLevel": 2
+        },
+        "splitApp": {
+          "viewName": "SplitApp",
+          "viewPath": "UI5toLearn.component.Profile.view",
+          "viewLevel": 2
+        },
+        "charts": {
+          "viewName": "Charts",
           "viewPath": "UI5toLearn.component.Profile.view",
           "viewLevel": 2
         }

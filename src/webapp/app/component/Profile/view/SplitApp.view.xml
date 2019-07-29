@@ -2,10 +2,10 @@
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
   xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-  controllerName="UI5toLearn.component.Profile.controller.Answers" width="100%" height="100%"
+  controllerName="UI5toLearn.component.Profile.controller.SplitApp" width="100%" height="100%"
   displayBlock="true">
 
-  <SplitApp id="answers" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+  <SplitApp id="splitApp" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 
     <masterPages>
       <Page id="master" title="Master 1" icon="sap-icon://action" class="sapUiStdPage">

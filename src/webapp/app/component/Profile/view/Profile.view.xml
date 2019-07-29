@@ -23,25 +23,6 @@
           <Text text="{Model>/login}" class="customUserName" />
         </l:HorizontalLayout>
 
-        <!--<l:HorizontalLayout class="customHorLayPicText">-->
-          <!--<core:Icon press="onSearchForFriends" class="customFriendIcon" />-->
-          <!--<Text text="Search for new friends" class="customText" />-->
-        <!--</l:HorizontalLayout>-->
-
-        <!--<l:HorizontalLayout class="customHorLayPicText">-->
-          <!--<core:Icon tooltip="Groups" class="customGroupIcon"/>-->
-          <!--<Text text="Groups" class="customText" />-->
-        <!--</l:HorizontalLayout>-->
-
-        <!--<l:HorizontalLayout class="customHorLayPicText">-->
-          <!--<core:Icon tooltip="Settings" class="customSettingsIcon"/>-->
-          <!--<Text text="Settings" class="customText" />-->
-        <!--</l:HorizontalLayout>-->
-
-        <!--<l:HorizontalLayout class="customHorLayPicText">-->
-          <!--<core:Icon tooltip="Help" class="customHelpIcon"/>-->
-          <!--<Text text="Help" class="customText" />-->
-        <!--</l:HorizontalLayout>-->
       </l:VerticalLayout>
 
       <l:VerticalLayout class="customVerLayIcon">
@@ -60,17 +41,30 @@
         <core:Icon tooltip="Bookmarks" class="customBookmarksIcon" press="goToBookmarks" />
       </l:VerticalLayout>
 
-      <List id="profileList"
-            items="{path: 'Model>/profileOptions'}">
-        <items>
-          <StandardListItem
-                            type="Active"
-                            class="customListItem"
-                            icon="{Model>icon}"
-                            title="{Model>text}"
-                            press="onItemSelected"/>
-        </items>
-      </List>
+      <l:HorizontalLayout class="customHorLayProfileView">
+        <List id="profileList"
+              items="{path: 'Model>/profileOptions'}">
+          <items>
+            <StandardListItem
+              type="Active"
+              class="customListItem"
+              icon="{Model>icon}"
+              title="{Model>text}"
+              press="onItemSelected"/>
+          </items>
+        </List>
+
+        <List id="functionList"
+              items="{path: 'Model>/functionOptions'}">
+          <items>
+            <StandardListItem
+              type="Active"
+              class="customFunctionListItem"
+              title="{Model>text}"
+              press="onFunctionSelected"/>
+          </items>
+        </List>
+      </l:HorizontalLayout>
 
     </tnt:mainContents>
   </tnt:ToolPage>

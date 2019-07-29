@@ -17,10 +17,10 @@ sap.ui.define([
         jQuery.sap.log.info("User accessed route " + sRouteName + ", timestamp = " + new Date().getTime());
       });
 
-      this.getEventBus().subscribe("Profile", "GoToNotes", this.goToNotes, this);
-      this.getEventBus().subscribe("Profile", "GoToAnswers", this.goToAnswers, this);
-      this.getEventBus().subscribe("Profile", "GoToBookmarks", this.goToBookmarks, this);
+      this.getEventBus().subscribe("Profile", "GoToSplitApp", this.goToSplitApp, this);
+      this.getEventBus().subscribe("Profile", "GoToCharts", this.goToCharts, this);
       this.getEventBus().subscribe("Profile", "GoToSelectedItem", this.goToSelectedItem, this);
+      this.getEventBus().subscribe("Profile", "GoToSelectedFunction", this.goToSelectedItem, this);
     },
 
     //press menu button
@@ -47,14 +47,11 @@ sap.ui.define([
     goToLogout: function (oEvent) {
       // this.getRouter().navTo("logout");
     },
-    goToNotes: function (oEvent) {
-      this.getRouter().navTo("notes");
+    goToSplitApp: function (oEvent) {
+      this.getRouter().navTo("splitApp");
     },
-    goToAnswers: function (oEvent) {
-      this.getRouter().navTo("answers");
-    },
-    goToBookmarks: function (oEvent) {
-      this.getRouter().navTo("bookmarks");
+    goToCharts: function (oEvent) {
+      this.getRouter().navTo("charts");
     },
     goToSelectedItem: function (sChannel, oEvent, data) {
       this.getRouter().navTo(data);
